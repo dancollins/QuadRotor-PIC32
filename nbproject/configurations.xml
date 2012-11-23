@@ -12,6 +12,19 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="DanOS" projectFiles="true">
+        <logicalFolder name="low-level" displayName="low-level" projectFiles="true">
+          <itemPath>DanOS/src/low-level/board.c</itemPath>
+          <itemPath>DanOS/src/low-level/iic.c</itemPath>
+          <itemPath>DanOS/src/low-level/serial.c</itemPath>
+          <itemPath>DanOS/src/low-level/timer.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="os" displayName="os" projectFiles="true">
+          <itemPath>DanOS/src/os/jobs.c</itemPath>
+          <itemPath>DanOS/src/os/list.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>src/main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -19,6 +32,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>DanOS/src</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -51,6 +67,39 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <C32>
+        <property key="additional-warnings" value="false"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories"
+                  value="C:\Users\Dan\Projects\Electronics\PIC\QuadRotorRevB.X\DanOS\include"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="keep-inline" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32>
+      <C32-AS>
+      </C32-AS>
+      <C32-LD>
+      </C32-LD>
+      <C32CPP>
+      </C32CPP>
+      <C32Global>
+      </C32Global>
+      <PK3OBPlatformTool>
+      </PK3OBPlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>

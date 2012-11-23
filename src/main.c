@@ -7,6 +7,7 @@
  */
 
 #include <xc.h>
+#include "DanOS.h"
 
 void init(void) {
 

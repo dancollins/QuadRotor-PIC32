@@ -6,11 +6,11 @@
             <name>QuadRotorRevB</name>
             <creation-uuid>fa1371f1-fff0-4576-af62-4dcfccf050c7</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions/>
-            <make-dep-projects/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
         </data>
     </configuration>
 </project>

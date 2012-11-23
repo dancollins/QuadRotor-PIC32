@@ -41,11 +41,11 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=
-POSSIBLE_DEPFILES=
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/src/main.o ${OBJECTDIR}/DanOS/src/low-level/board.o ${OBJECTDIR}/DanOS/src/low-level/iic.o ${OBJECTDIR}/DanOS/src/low-level/serial.o ${OBJECTDIR}/DanOS/src/low-level/timer.o ${OBJECTDIR}/DanOS/src/os/jobs.o ${OBJECTDIR}/DanOS/src/os/list.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/src/main.o.d ${OBJECTDIR}/DanOS/src/low-level/board.o.d ${OBJECTDIR}/DanOS/src/low-level/iic.o.d ${OBJECTDIR}/DanOS/src/low-level/serial.o.d ${OBJECTDIR}/DanOS/src/low-level/timer.o.d ${OBJECTDIR}/DanOS/src/os/jobs.o.d ${OBJECTDIR}/DanOS/src/os/list.o.d
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES=${OBJECTDIR}/src/main.o ${OBJECTDIR}/DanOS/src/low-level/board.o ${OBJECTDIR}/DanOS/src/low-level/iic.o ${OBJECTDIR}/DanOS/src/low-level/serial.o ${OBJECTDIR}/DanOS/src/low-level/timer.o ${OBJECTDIR}/DanOS/src/os/jobs.o ${OBJECTDIR}/DanOS/src/os/list.o
 
 
 CFLAGS=
@@ -81,7 +81,77 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/src/main.o: src/main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/src 
+	@${RM} ${OBJECTDIR}/src/main.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/src/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/src/main.o.d" -o ${OBJECTDIR}/src/main.o src/main.c   
+	
+${OBJECTDIR}/DanOS/src/low-level/board.o: DanOS/src/low-level/board.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/low-level 
+	@${RM} ${OBJECTDIR}/DanOS/src/low-level/board.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/low-level/board.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/low-level/board.o.d" -o ${OBJECTDIR}/DanOS/src/low-level/board.o DanOS/src/low-level/board.c   
+	
+${OBJECTDIR}/DanOS/src/low-level/iic.o: DanOS/src/low-level/iic.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/low-level 
+	@${RM} ${OBJECTDIR}/DanOS/src/low-level/iic.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/low-level/iic.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/low-level/iic.o.d" -o ${OBJECTDIR}/DanOS/src/low-level/iic.o DanOS/src/low-level/iic.c   
+	
+${OBJECTDIR}/DanOS/src/low-level/serial.o: DanOS/src/low-level/serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/low-level 
+	@${RM} ${OBJECTDIR}/DanOS/src/low-level/serial.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/low-level/serial.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/low-level/serial.o.d" -o ${OBJECTDIR}/DanOS/src/low-level/serial.o DanOS/src/low-level/serial.c   
+	
+${OBJECTDIR}/DanOS/src/low-level/timer.o: DanOS/src/low-level/timer.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/low-level 
+	@${RM} ${OBJECTDIR}/DanOS/src/low-level/timer.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/low-level/timer.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/low-level/timer.o.d" -o ${OBJECTDIR}/DanOS/src/low-level/timer.o DanOS/src/low-level/timer.c   
+	
+${OBJECTDIR}/DanOS/src/os/jobs.o: DanOS/src/os/jobs.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/os 
+	@${RM} ${OBJECTDIR}/DanOS/src/os/jobs.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/os/jobs.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/os/jobs.o.d" -o ${OBJECTDIR}/DanOS/src/os/jobs.o DanOS/src/os/jobs.c   
+	
+${OBJECTDIR}/DanOS/src/os/list.o: DanOS/src/os/list.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/os 
+	@${RM} ${OBJECTDIR}/DanOS/src/os/list.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/os/list.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/os/list.o.d" -o ${OBJECTDIR}/DanOS/src/os/list.o DanOS/src/os/list.c   
+	
 else
+${OBJECTDIR}/src/main.o: src/main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/src 
+	@${RM} ${OBJECTDIR}/src/main.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/src/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/src/main.o.d" -o ${OBJECTDIR}/src/main.o src/main.c   
+	
+${OBJECTDIR}/DanOS/src/low-level/board.o: DanOS/src/low-level/board.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/low-level 
+	@${RM} ${OBJECTDIR}/DanOS/src/low-level/board.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/low-level/board.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/low-level/board.o.d" -o ${OBJECTDIR}/DanOS/src/low-level/board.o DanOS/src/low-level/board.c   
+	
+${OBJECTDIR}/DanOS/src/low-level/iic.o: DanOS/src/low-level/iic.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/low-level 
+	@${RM} ${OBJECTDIR}/DanOS/src/low-level/iic.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/low-level/iic.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/low-level/iic.o.d" -o ${OBJECTDIR}/DanOS/src/low-level/iic.o DanOS/src/low-level/iic.c   
+	
+${OBJECTDIR}/DanOS/src/low-level/serial.o: DanOS/src/low-level/serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/low-level 
+	@${RM} ${OBJECTDIR}/DanOS/src/low-level/serial.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/low-level/serial.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/low-level/serial.o.d" -o ${OBJECTDIR}/DanOS/src/low-level/serial.o DanOS/src/low-level/serial.c   
+	
+${OBJECTDIR}/DanOS/src/low-level/timer.o: DanOS/src/low-level/timer.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/low-level 
+	@${RM} ${OBJECTDIR}/DanOS/src/low-level/timer.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/low-level/timer.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/low-level/timer.o.d" -o ${OBJECTDIR}/DanOS/src/low-level/timer.o DanOS/src/low-level/timer.c   
+	
+${OBJECTDIR}/DanOS/src/os/jobs.o: DanOS/src/os/jobs.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/os 
+	@${RM} ${OBJECTDIR}/DanOS/src/os/jobs.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/os/jobs.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/os/jobs.o.d" -o ${OBJECTDIR}/DanOS/src/os/jobs.o DanOS/src/os/jobs.c   
+	
+${OBJECTDIR}/DanOS/src/os/list.o: DanOS/src/os/list.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/DanOS/src/os 
+	@${RM} ${OBJECTDIR}/DanOS/src/os/list.o.d 
+	@${FIXDEPS} "${OBJECTDIR}/DanOS/src/os/list.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"C:/Users/Dan/Projects/Electronics/PIC/QuadRotorRevB.X/DanOS/include" -MMD -MF "${OBJECTDIR}/DanOS/src/os/list.o.d" -o ${OBJECTDIR}/DanOS/src/os/list.o DanOS/src/os/list.c   
+	
 endif
 
 # ------------------------------------------------------------------------------------
