@@ -1,0 +1,4 @@
+Quad Rotor Controller Rev B
+===
+
+Again, another rewrite of the quadrotor source!  This time I'll be using my own RTOS for the scheduling, along with some much better written drivers.
